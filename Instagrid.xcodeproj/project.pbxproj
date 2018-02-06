@@ -22,6 +22,8 @@
 		BF5A14FC2029C502002E4728 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5A14FF2029C502002E4728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF5A15012029C502002E4728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5A150C2029C7DA002E4728 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		BF5A150D2029C7DA002E4728 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,18 @@
 				BF5A14FC2029C502002E4728 /* Assets.xcassets */,
 				BF5A14FE2029C502002E4728 /* LaunchScreen.storyboard */,
 				BF5A15012029C502002E4728 /* Info.plist */,
+				BF5A150B2029C7B5002E4728 /* Fonts */,
 			);
 			path = Instagrid;
+			sourceTree = "<group>";
+		};
+		BF5A150B2029C7B5002E4728 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BF5A150C2029C7DA002E4728 /* Delm-Medium.otf */,
+				BF5A150D2029C7DA002E4728 /* ThirstySoftRegular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
