@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF3FAA24202C9F5B00F3BE93 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF3FAA23202C9F5B00F3BE93 /* Delm-Medium.otf */; };
+		BF3FAA26202C9F6700F3BE93 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF3FAA25202C9F6700F3BE93 /* ThirstySoftRegular.otf */; };
 		BF5A14F62029C501002E4728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A14F52029C501002E4728 /* AppDelegate.swift */; };
 		BF5A14F82029C502002E4728 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A14F72029C502002E4728 /* ViewController.swift */; };
 		BF5A14FB2029C502002E4728 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5A14F92029C502002E4728 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF3FAA23202C9F5B00F3BE93 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "../../../../Polices/Delm-Medium.otf"; sourceTree = "<group>"; };
+		BF3FAA25202C9F6700F3BE93 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirstySoftRegular.otf; path = ../../../../Polices/ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		BF5A14F22029C501002E4728 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5A14F52029C501002E4728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5A14F72029C502002E4728 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,8 +26,6 @@
 		BF5A14FC2029C502002E4728 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5A14FF2029C502002E4728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF5A15012029C502002E4728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF5A150C2029C7DA002E4728 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
-		BF5A150D2029C7DA002E4728 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,24 +58,16 @@
 		BF5A14F42029C501002E4728 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				BF3FAA25202C9F6700F3BE93 /* ThirstySoftRegular.otf */,
+				BF3FAA23202C9F5B00F3BE93 /* Delm-Medium.otf */,
 				BF5A14F52029C501002E4728 /* AppDelegate.swift */,
 				BF5A14F72029C502002E4728 /* ViewController.swift */,
 				BF5A14F92029C502002E4728 /* Main.storyboard */,
 				BF5A14FC2029C502002E4728 /* Assets.xcassets */,
 				BF5A14FE2029C502002E4728 /* LaunchScreen.storyboard */,
 				BF5A15012029C502002E4728 /* Info.plist */,
-				BF5A150B2029C7B5002E4728 /* Fonts */,
 			);
 			path = Instagrid;
-			sourceTree = "<group>";
-		};
-		BF5A150B2029C7B5002E4728 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				BF5A150C2029C7DA002E4728 /* Delm-Medium.otf */,
-				BF5A150D2029C7DA002E4728 /* ThirstySoftRegular.otf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +131,8 @@
 			files = (
 				BF5A15002029C502002E4728 /* LaunchScreen.storyboard in Resources */,
 				BF5A14FD2029C502002E4728 /* Assets.xcassets in Resources */,
+				BF3FAA26202C9F6700F3BE93 /* ThirstySoftRegular.otf in Resources */,
+				BF3FAA24202C9F5B00F3BE93 /* Delm-Medium.otf in Resources */,
 				BF5A14FB2029C502002E4728 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
