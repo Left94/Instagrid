@@ -307,7 +307,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhX-ip-3LB">
-                                <rect key="frame" x="107.5" y="144" width="160.5" height="29"/>
+                                <rect key="frame" x="108" y="144" width="160.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -332,7 +332,6 @@
                         <constraints>
                             <constraint firstItem="tnd-fA-GyG" firstAttribute="top" secondItem="3wl-nN-Z8g" secondAttribute="bottom" constant="73" id="78L-IZ-ZFf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hic-Aw-wRF" secondAttribute="bottom" constant="32" id="8dU-zw-Ygk"/>
-                            <constraint firstItem="3wl-nN-Z8g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A6g-2K-gIB"/>
                             <constraint firstItem="3wl-nN-Z8g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D8T-wk-m54"/>
                             <constraint firstItem="Xzs-aL-TuY" firstAttribute="top" secondItem="3wl-nN-Z8g" secondAttribute="bottom" constant="73" id="Hat-KA-8L9"/>
                             <constraint firstItem="JhX-ip-3LB" firstAttribute="top" secondItem="fMD-RK-GLd" secondAttribute="bottom" constant="12.5" id="OL0-SL-KdG"/>
@@ -354,9 +353,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="view1" destination="KEe-yg-swA" id="mn5-aU-Jen"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
