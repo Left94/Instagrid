@@ -191,7 +191,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-fP-BY1">
                                 <rect key="frame" x="199" y="143" width="15" height="15"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;}" translatesAutoresizingMaskIntoConstraints="NO" id="P1e-jJ-HTF">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="UpIcon" translatesAutoresizingMaskIntoConstraints="NO" id="P1e-jJ-HTF">
                                         <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="P1e-jJ-HTF" secondAttribute="height" multiplier="1:1" id="IHP-hp-gd1"/>
@@ -242,10 +242,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;}" width="15" height="10"/>
         <image name="Combined Shape" width="48" height="49"/>
         <image name="Layout 1" width="80" height="80"/>
         <image name="Layout 2" width="80" height="80"/>
         <image name="Layout 3" width="80" height="80"/>
+        <image name="UpIcon" width="15" height="10"/>
     </resources>
 </document>
