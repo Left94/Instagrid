@@ -27,14 +27,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wl-nN-Z8g" userLabel="ViewImages0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wl-nN-Z8g" userLabel="MainView" customClass="MainView" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="37" y="198.66666666666663" width="339" height="339"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87r-Vv-lK9" userLabel="Rounded View1" customClass="RoundedView" customModule="Instagrid" customModuleProvider="target">
-                                        <rect key="frame" x="14.666666666666657" y="14.666666666666686" width="148" height="147.33333333333334"/>
+                                        <rect key="frame" x="14.666666666666671" y="14.666666666666686" width="147.66666666666663" height="147.33333333333334"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Combined Shape" translatesAutoresizingMaskIntoConstraints="NO" id="u4B-eg-z7v">
-                                                <rect key="frame" x="0.0" y="0.0" width="148" height="147.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="147.33333333333334"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.95310121774673462" green="0.95312350988388062" blue="0.95311146974563599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,10 +52,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJD-Jj-sWR" userLabel="Rounded View2" customClass="RoundedView" customModule="Instagrid" customModuleProvider="target">
-                                        <rect key="frame" x="177.33333333333337" y="14.666666666666686" width="146.66666666666663" height="147.33333333333334"/>
+                                        <rect key="frame" x="177" y="14.666666666666686" width="147" height="147.33333333333334"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Combined Shape" translatesAutoresizingMaskIntoConstraints="NO" id="91o-7Z-pXE">
-                                                <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="147.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="147.33333333333334"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.95310121774673462" green="0.95312350988388062" blue="0.95311146974563599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,10 +73,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZu-rJ-CeN" userLabel="Rounded View3" customClass="RoundedView" customModule="Instagrid" customModuleProvider="target">
-                                        <rect key="frame" x="14" y="176.33333333333331" width="148.66666666666666" height="148.33333333333331"/>
+                                        <rect key="frame" x="14" y="176.33333333333331" width="148.33333333333334" height="148.33333333333331"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Combined Shape" translatesAutoresizingMaskIntoConstraints="NO" id="oAr-8v-mgg">
-                                                <rect key="frame" x="0.0" y="0.0" width="148.66666666666666" height="148.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="148.33333333333334" height="148.33333333333334"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9531012177" green="0.95312350990000005" blue="0.95311146970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,10 +94,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hq-Gs-Pa5" userLabel="Rounded View4" customClass="RoundedView" customModule="Instagrid" customModuleProvider="target">
-                                        <rect key="frame" x="176.33333333333331" y="176.33333333333331" width="148.33333333333331" height="148.33333333333331"/>
+                                        <rect key="frame" x="177" y="176.33333333333331" width="147.66666666666663" height="148.33333333333331"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Combined Shape" translatesAutoresizingMaskIntoConstraints="NO" id="DUX-fl-DT3">
-                                                <rect key="frame" x="0.0" y="0.0" width="148.33333333333334" height="148.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="148.33333333333334"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9531012177" green="0.95312350990000005" blue="0.95311146970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -134,6 +134,26 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdA-7w-G7d" userLabel="Rounded View6" customClass="RoundedView" customModule="Instagrid" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="14.666666666666686" width="310" height="147.33333333333334"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Combined Shape" translatesAutoresizingMaskIntoConstraints="NO" id="7ib-7r-JNJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="147.33333333333334"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.9531012177" green="0.95312350990000005" blue="0.95311146970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="7ib-7r-JNJ" firstAttribute="top" secondItem="RdA-7w-G7d" secondAttribute="top" id="80a-3x-PRT"/>
+                                            <constraint firstAttribute="bottom" secondItem="7ib-7r-JNJ" secondAttribute="bottom" id="VZM-vE-U71"/>
+                                            <constraint firstAttribute="trailing" secondItem="7ib-7r-JNJ" secondAttribute="trailing" id="eWL-HY-ZBK"/>
+                                            <constraint firstItem="7ib-7r-JNJ" firstAttribute="leading" secondItem="RdA-7w-G7d" secondAttribute="leading" id="njL-RY-qDi"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.031396728008985519" green="0.47906261682510376" blue="0.66143852472305298" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -141,20 +161,32 @@
                                     <constraint firstAttribute="bottom" secondItem="9hq-Gs-Pa5" secondAttribute="bottom" constant="14.5" id="4GZ-Ad-MaI"/>
                                     <constraint firstItem="xJD-Jj-sWR" firstAttribute="top" secondItem="3wl-nN-Z8g" secondAttribute="top" constant="14.5" id="4R4-04-mbJ"/>
                                     <constraint firstItem="fZu-rJ-CeN" firstAttribute="leading" secondItem="3wl-nN-Z8g" secondAttribute="leading" constant="14.5" id="4dq-HE-jwS"/>
+                                    <constraint firstAttribute="trailing" secondItem="RdA-7w-G7d" secondAttribute="trailing" constant="14.5" id="Faw-Zl-cTb"/>
+                                    <constraint firstItem="fZu-rJ-CeN" firstAttribute="top" secondItem="RdA-7w-G7d" secondAttribute="bottom" constant="14.5" id="FlI-rA-Mqo"/>
                                     <constraint firstItem="LrM-KA-dLy" firstAttribute="leading" secondItem="3wl-nN-Z8g" secondAttribute="leading" constant="14.5" id="Gg8-St-mvQ"/>
                                     <constraint firstItem="xJD-Jj-sWR" firstAttribute="height" secondItem="87r-Vv-lK9" secondAttribute="height" id="JNB-o1-Fq2"/>
                                     <constraint firstAttribute="width" secondItem="3wl-nN-Z8g" secondAttribute="height" multiplier="1:1" id="JOt-tq-7tO"/>
+                                    <constraint firstItem="RdA-7w-G7d" firstAttribute="top" secondItem="3wl-nN-Z8g" secondAttribute="top" constant="14.5" id="PeU-PT-0On"/>
                                     <constraint firstAttribute="bottom" secondItem="fZu-rJ-CeN" secondAttribute="bottom" constant="14.5" id="Q1N-O4-3Qt"/>
                                     <constraint firstItem="87r-Vv-lK9" firstAttribute="top" secondItem="3wl-nN-Z8g" secondAttribute="top" constant="14.5" id="Qa7-Ne-tx7"/>
                                     <constraint firstItem="LrM-KA-dLy" firstAttribute="height" secondItem="87r-Vv-lK9" secondAttribute="height" id="eyD-ca-suU"/>
                                     <constraint firstAttribute="bottom" secondItem="LrM-KA-dLy" secondAttribute="bottom" constant="14.5" id="jiw-LZ-5wR"/>
                                     <constraint firstItem="87r-Vv-lK9" firstAttribute="leading" secondItem="3wl-nN-Z8g" secondAttribute="leading" constant="14.5" id="ko9-Jv-eon"/>
+                                    <constraint firstItem="RdA-7w-G7d" firstAttribute="leading" secondItem="3wl-nN-Z8g" secondAttribute="leading" constant="14.5" id="miX-9T-reb"/>
                                     <constraint firstItem="xJD-Jj-sWR" firstAttribute="leading" secondItem="87r-Vv-lK9" secondAttribute="trailing" constant="14.5" id="rTt-OX-7J5"/>
                                     <constraint firstItem="9hq-Gs-Pa5" firstAttribute="top" secondItem="xJD-Jj-sWR" secondAttribute="bottom" constant="14.5" id="rqc-jb-Vpz"/>
                                     <constraint firstItem="fZu-rJ-CeN" firstAttribute="top" secondItem="87r-Vv-lK9" secondAttribute="bottom" constant="14.5" id="u2K-OF-tqX"/>
                                     <constraint firstAttribute="trailing" secondItem="9hq-Gs-Pa5" secondAttribute="trailing" constant="14.5" id="wZa-sn-0bL"/>
                                     <constraint firstAttribute="trailing" secondItem="LrM-KA-dLy" secondAttribute="trailing" constant="14.5" id="ysq-mA-ziH"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="roundedView1Image" destination="u4B-eg-z7v" id="bEy-84-HZl"/>
+                                    <outlet property="roundedView2Image" destination="91o-7Z-pXE" id="L2n-I3-lfc"/>
+                                    <outlet property="roundedView3Image" destination="oAr-8v-mgg" id="wMR-eX-KZH"/>
+                                    <outlet property="roundedView4Image" destination="DUX-fl-DT3" id="gMA-66-cgR"/>
+                                    <outlet property="roundedView5Image" destination="B1K-LX-czf" id="hZ0-Dp-S4H"/>
+                                    <outlet property="roundedView6Image" destination="7ib-7r-JNJ" id="PuV-Sl-W6W"/>
+                                </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YWO-GX-tYI" userLabel="Stack View Layouts">
                                 <rect key="frame" x="66.666666666666686" y="594.66666666666663" width="280" height="80"/>
@@ -263,7 +295,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-qo-SWd">
-                                <rect key="frame" x="148.66666666666666" y="28" width="116.99999999999997" height="35"/>
+                                <rect key="frame" x="142" y="28" width="130.33333333333337" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dgg-qo-SWd" secondAttribute="height" multiplier="10:3" id="7ag-ho-ag3"/>
                                 </constraints>
