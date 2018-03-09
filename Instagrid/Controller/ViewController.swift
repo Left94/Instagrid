@@ -11,40 +11,33 @@ import UIKit
 
 import UIKit
 
-@IBDesignable public class RoundedView: UIView { //Class Custom to add some border color,size and radius
-    
-    @IBInspectable var borderColor: UIColor = UIColor.white {
-        didSet {
-            layer.borderColor = borderColor.cgColor
-        }
-    }
-    
-    @IBInspectable var borderWidth: CGFloat = 2.0 {
-        didSet {
-            layer.borderWidth = borderWidth
-        }
-    }
-    
-    @IBInspectable var cornerRadius: CGFloat = 0.0 {
-        didSet {
-            layer.cornerRadius = cornerRadius
-        }
-    }
-    
-}
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+class ViewController: UIViewController {
     //Manage the main view format
     @IBOutlet weak var mainView: MainView!
     @IBOutlet weak var buttonLayout1: UIButton!
     @IBOutlet weak var buttonLayout2: UIButton!
     @IBOutlet weak var buttonLayout3: UIButton!
     
-    //Manage the Image views
+    
+    //Manage the Images view
     @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var imageView2: UIImageView!
-    @IBOutlet weak var imageView1button: UIButton!
-    @IBOutlet weak var imageView2button: UIButton!
+    @IBOutlet weak var imageView3: UIImageView!
+    @IBOutlet weak var imageView4: UIImageView!
+    @IBOutlet weak var imageView5: UIImageView!
+    @IBOutlet weak var imageView6: UIImageView!
+    
+    //Manage the Buttons view
+    @IBOutlet weak var imageView1Button: UIButton!
+    @IBOutlet weak var imageView2Button: UIButton!
+    @IBOutlet weak var imageView3Button: UIButton!
+    @IBOutlet weak var imageView4Button: UIButton!
+    @IBOutlet weak var imageView5Button: UIButton!
+    @IBOutlet weak var imageView6Button: UIButton!
+    
+    //VAR
     var imagePicker = UIImagePickerController()
     var imagePicked = 0
     
@@ -57,37 +50,65 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     
     //action did after taping a layout button
-    @IBAction func didTapButtonLayout1() {
-        mainView.format = .layout1
+    @IBAction func buttonLayoutClicked(_ sender: UIButton) {
+        let tag = sender.tag
+        switch tag {
+        case 0:
+            mainView.format = .layout1
+        case 1:
+            mainView.format = .layout2
+        case 2:
+            mainView.format = .layout3
+        default:
+            break
+        }
     }
-    @IBAction func didTapButtonLayout2() {
-        mainView.format = .layout2
-    }
-    @IBAction func didTapButtonLayout3() {
-        mainView.format = .layout3
-    }
-   
     
     //action did after taping an imageView button
-    @IBAction func imageView1BtnClicked(_ sender: UIButton) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
-    }
-    @IBAction func imageView2BtnClicked(_ sender: UIButton) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
+    @IBAction func buttonViewCliked(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.savedPhotosAlbum){
+            imagePicked = sender.tag
+            present(imagePicker, animated: true)
+        }
+        
     }
     
+}
+
+//MARK: - UIImagePickerController
+
+extension UIImagePickerController {
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .all
+    }
+}
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    fileprivate func imageSelected(_ pickedImage: UIImage?) {
+        if imagePicked == 3 {
+            imageView1.image = pickedImage
+            imageView1Button.imageView?.isHidden = true
+        }else if imagePicked == 4 {
+            imageView2.image = pickedImage
+            imageView2Button.imageView?.isHidden = true
+        }else if imagePicked == 5 {
+            imageView3.image = pickedImage
+            imageView3Button.imageView?.isHidden = true
+        }else if imagePicked == 6 {
+            imageView4.image = pickedImage
+            imageView4Button.imageView?.isHidden = true
+        }else if imagePicked == 7 {
+            imageView5.image = pickedImage
+            imageView5Button.imageView?.isHidden = true
+        }else if imagePicked == 8 {
+            imageView6.image = pickedImage
+            imageView6Button.imageView?.isHidden = true
+        }
+    }
     
     func imagePickerController(_ picker: UIImagePickerController , didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.imageView1.image = pickedImage
-            self.imageView1button.imageView?.isHidden = true
-            
-            
-        }
+        let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        imageSelected(pickedImage)
         dismiss(animated: true, completion: nil)
     }
     
@@ -95,8 +116,4 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
     }
     
-    
-    
-
 }
-

@@ -30,17 +30,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wl-nN-Z8g" userLabel="MainView" customClass="MainView" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="37" y="161.5" width="245" height="245"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87r-Vv-lK9" userLabel="Rounded View1">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87r-Vv-lK9" userLabel="View1">
                                         <rect key="frame" x="14.5" y="14.5" width="101" height="100.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u4B-eg-z7v" userLabel="imageView1">
                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="100.5"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXY-jB-Crd" userLabel="imageView1Button">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXY-jB-Crd" userLabel="imageView1Button">
                                                 <rect key="frame" x="-0.5" y="0.0" width="101" height="100.5"/>
                                                 <state key="normal" image="Combined Shape"/>
                                                 <connections>
-                                                    <action selector="imageView1BtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Phh-x2-shu"/>
+                                                    <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="siB-VP-IJZ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -62,17 +62,20 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJD-Jj-sWR" userLabel="Rounded View2" customClass="RoundedView" customModule="Instagrid" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJD-Jj-sWR" userLabel="View2">
                                         <rect key="frame" x="130" y="14.5" width="100" height="100.5"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91o-7Z-pXE" userLabel="imageView2">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100.5"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sos-0E-UG7" userLabel="ButtonImage2">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sos-0E-UG7" userLabel="imageView2Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="GyQ-4G-RVC"/>
+                                                </constraints>
                                                 <state key="normal" image="Combined Shape"/>
                                                 <connections>
-                                                    <action selector="imageView2BtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AMb-nC-EOg"/>
+                                                    <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CYR-63-gHN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -94,15 +97,18 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZu-rJ-CeN" userLabel="Rounded View3" customClass="RoundedView" customModule="Instagrid" customModuleProvider="target">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZu-rJ-CeN" userLabel="View3">
                                         <rect key="frame" x="14" y="129.5" width="101.5" height="101"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oAr-8v-mgg" userLabel="imageView3">
                                                 <rect key="frame" x="0.0" y="0.0" width="101.5" height="101"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s87-3P-FaM" userLabel="ButtonImage3">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s87-3P-FaM" userLabel="imageView3Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="101.5" height="101"/>
                                                 <state key="normal" image="Combined Shape"/>
+                                                <connections>
+                                                    <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2bh-HP-kpc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9531012177" green="0.95312350990000005" blue="0.95311146970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,15 +129,18 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hq-Gs-Pa5" userLabel="Rounded View4" customClass="RoundedView" customModule="Instagrid" customModuleProvider="target">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hq-Gs-Pa5" userLabel="View4">
                                         <rect key="frame" x="130" y="129.5" width="100.5" height="101"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DUX-fl-DT3" userLabel="imageView4">
                                                 <rect key="frame" x="0.0" y="0.0" width="100.5" height="101"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUp-tn-WGt" userLabel="ButtonImage4">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUp-tn-WGt" userLabel="imageView4Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="100.5" height="101"/>
                                                 <state key="normal" image="Combined Shape"/>
+                                                <connections>
+                                                    <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VsA-4U-JIx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9531012177" green="0.95312350990000005" blue="0.95311146970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -152,15 +161,18 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrM-KA-dLy" userLabel="Rounded View5" customClass="RoundedView" customModule="Instagrid" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrM-KA-dLy" userLabel="View5">
                                         <rect key="frame" x="14.5" y="130.5" width="216" height="100"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1K-LX-czf" userLabel="imageView5">
                                                 <rect key="frame" x="0.0" y="0.0" width="216" height="100"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhB-Cn-ESi" userLabel="ButtonImage5">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhB-Cn-ESi" userLabel="imageView5Button">
                                                 <rect key="frame" x="-0.5" y="0.0" width="216" height="100"/>
                                                 <state key="normal" image="Combined Shape"/>
+                                                <connections>
+                                                    <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsq-Ir-bGx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.95310121774673462" green="0.95312350988388062" blue="0.95311146974563599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -180,15 +192,18 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdA-7w-G7d" userLabel="Rounded View6" customClass="RoundedView" customModule="Instagrid" customModuleProvider="target">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdA-7w-G7d" userLabel="View6">
                                         <rect key="frame" x="14" y="14.5" width="216" height="100.5"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ib-7r-JNJ" userLabel="imageView6">
                                                 <rect key="frame" x="0.0" y="0.0" width="216" height="100.5"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgY-5r-1kQ" userLabel="ButtonImage6">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgY-5r-1kQ" userLabel="imageView6Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="216" height="100.5"/>
                                                 <state key="normal" image="Combined Shape"/>
+                                                <connections>
+                                                    <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gH3-6i-mAL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9531012177" green="0.95312350990000005" blue="0.95311146970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -237,12 +252,12 @@
                                     <outlet property="layout1Selected" destination="FTU-eP-a7Y" id="wG4-qk-Qa3"/>
                                     <outlet property="layout2Selected" destination="K6y-Hm-H8J" id="DEM-gP-8e7"/>
                                     <outlet property="layout3Selected" destination="Ct4-zV-pfs" id="T3P-6a-0aq"/>
-                                    <outlet property="roundedView1" destination="87r-Vv-lK9" id="J6g-x3-oVR"/>
-                                    <outlet property="roundedView2" destination="xJD-Jj-sWR" id="FF0-tX-Fcd"/>
-                                    <outlet property="roundedView3" destination="fZu-rJ-CeN" id="8if-Vm-ChL"/>
-                                    <outlet property="roundedView4" destination="9hq-Gs-Pa5" id="u88-wI-C6C"/>
-                                    <outlet property="roundedView5" destination="LrM-KA-dLy" id="G4a-dg-9cL"/>
-                                    <outlet property="roundedView6" destination="RdA-7w-G7d" id="FY7-Px-jme"/>
+                                    <outlet property="view1" destination="87r-Vv-lK9" id="J6g-x3-oVR"/>
+                                    <outlet property="view2" destination="xJD-Jj-sWR" id="FF0-tX-Fcd"/>
+                                    <outlet property="view3" destination="fZu-rJ-CeN" id="8if-Vm-ChL"/>
+                                    <outlet property="view4" destination="9hq-Gs-Pa5" id="u88-wI-C6C"/>
+                                    <outlet property="view5" destination="LrM-KA-dLy" id="G4a-dg-9cL"/>
+                                    <outlet property="view6" destination="RdA-7w-G7d" id="FY7-Px-jme"/>
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YWO-GX-tYI" userLabel="Stack View Layouts">
@@ -255,7 +270,7 @@
                                                 <rect key="frame" x="-0.5" y="0.0" width="80" height="80"/>
                                                 <state key="normal" image="Layout 1"/>
                                                 <connections>
-                                                    <action selector="didTapButtonLayout1" destination="BYZ-38-t0r" eventType="touchUpInside" id="FDx-eV-rvJ"/>
+                                                    <action selector="buttonLayoutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WLI-8D-1e3"/>
                                                 </connections>
                                             </button>
                                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="FTU-eP-a7Y">
@@ -279,11 +294,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mR8-IH-dEl" userLabel="ViewLayout2">
                                         <rect key="frame" x="100" y="0.0" width="80" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVR-Gd-4Kd" userLabel="ButtonLayout2">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVR-Gd-4Kd" userLabel="ButtonLayout2">
                                                 <rect key="frame" x="-0.5" y="0.0" width="80" height="80"/>
                                                 <state key="normal" image="Layout 2"/>
                                                 <connections>
-                                                    <action selector="didTapButtonLayout2" destination="BYZ-38-t0r" eventType="touchUpInside" id="5u6-ts-dhQ"/>
+                                                    <action selector="buttonLayoutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TI0-YM-oDC"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="K6y-Hm-H8J">
@@ -307,11 +322,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJS-Z8-UI6" userLabel="ViewLayout3">
                                         <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agD-0a-act" userLabel="ButtonLayout3">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agD-0a-act" userLabel="ButtonLayout3">
                                                 <rect key="frame" x="-0.5" y="0.0" width="80" height="80"/>
                                                 <state key="normal" image="Layout 3"/>
                                                 <connections>
-                                                    <action selector="didTapButtonLayout3" destination="BYZ-38-t0r" eventType="touchUpInside" id="htr-YW-Yl4"/>
+                                                    <action selector="buttonLayoutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1X-wR-kOP"/>
                                                 </connections>
                                             </button>
                                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="Ct4-zV-pfs">
@@ -345,6 +360,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UpIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6s7-TC-HRf">
                                         <rect key="frame" x="62.5" y="0.0" width="15" height="15"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="smT-Ss-3IJ"/>
                                             <constraint firstAttribute="width" constant="15" id="xXm-Df-mqp"/>
@@ -362,6 +378,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <gestureRecognizers/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-qo-SWd">
                                 <rect key="frame" x="95" y="28" width="130" height="39"/>
@@ -380,6 +397,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.76474219560623169" green="0.8729168176651001" blue="0.91855514049530029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3wl-nN-Z8g" secondAttribute="bottom" constant="15" id="0ig-zg-cig"/>
                             <constraint firstItem="dgg-qo-SWd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="3Oc-cx-CWl"/>
@@ -466,11 +484,19 @@
                     <connections>
                         <outlet property="buttonLayout1" destination="RzK-gq-ECS" id="87u-oz-Amp"/>
                         <outlet property="buttonLayout2" destination="fVR-Gd-4Kd" id="x46-rq-5y4"/>
-                        <outlet property="buttonLayout3" destination="agD-0a-act" id="LOT-Va-B1J"/>
+                        <outlet property="buttonLayout3" destination="agD-0a-act" id="VAH-4s-p8h"/>
                         <outlet property="imageView1" destination="u4B-eg-z7v" id="KVa-Y0-gPJ"/>
-                        <outlet property="imageView1button" destination="ZXY-jB-Crd" id="uaE-tx-ltr"/>
+                        <outlet property="imageView1Button" destination="ZXY-jB-Crd" id="uaE-tx-ltr"/>
                         <outlet property="imageView2" destination="91o-7Z-pXE" id="5sw-Ra-isV"/>
-                        <outlet property="imageView2button" destination="Sos-0E-UG7" id="72o-zk-bgQ"/>
+                        <outlet property="imageView2Button" destination="Sos-0E-UG7" id="72o-zk-bgQ"/>
+                        <outlet property="imageView3" destination="oAr-8v-mgg" id="SMu-5F-3jE"/>
+                        <outlet property="imageView3Button" destination="s87-3P-FaM" id="zTG-cd-ESN"/>
+                        <outlet property="imageView4" destination="DUX-fl-DT3" id="466-XC-Ruu"/>
+                        <outlet property="imageView4Button" destination="eUp-tn-WGt" id="dKY-eK-P1D"/>
+                        <outlet property="imageView5" destination="B1K-LX-czf" id="m9F-gt-mNE"/>
+                        <outlet property="imageView5Button" destination="YhB-Cn-ESi" id="3nv-2G-qy1"/>
+                        <outlet property="imageView6" destination="7ib-7r-JNJ" id="uup-MG-bwf"/>
+                        <outlet property="imageView6Button" destination="RgY-5r-1kQ" id="sFk-Oi-M7z"/>
                         <outlet property="mainView" destination="3wl-nN-Z8g" id="Cr0-bQ-fGb"/>
                     </connections>
                 </viewController>
