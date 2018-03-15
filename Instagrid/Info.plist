@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Select image to Import</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Save your creation</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Delm-Medium.otf</string>

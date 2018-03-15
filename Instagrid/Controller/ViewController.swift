@@ -14,6 +14,8 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    
+    //MARK : - OUTLETS
     //Manage the main view format
     @IBOutlet weak var mainView: MainView!
     @IBOutlet weak var buttonLayout1: UIButton!
@@ -29,6 +31,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView5: UIImageView!
     @IBOutlet weak var imageView6: UIImageView!
     
+    
+    
     //Manage the Buttons view
     @IBOutlet weak var imageView1Button: UIButton!
     @IBOutlet weak var imageView2Button: UIButton!
@@ -37,7 +41,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView5Button: UIButton!
     @IBOutlet weak var imageView6Button: UIButton!
     
-    //VAR
+    //VARS
     var imagePicker = UIImagePickerController()
     var imagePicked = 0
     
@@ -46,24 +50,72 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         imagePicker.delegate = self
         imagePicker.sourceType = .savedPhotosAlbum
-        imagePicker.allowsEditing = false    }
+        imagePicker.allowsEditing = false
+        
+    }
+    //MARK : - METHODS
+    //Flip effect
+    fileprivate func flipView(view : UIView, flipFrom: UIViewAnimationOptions) {
+        let transitionOptions: UIViewAnimationOptions = [flipFrom, .showHideTransitionViews]
+        UIView.transition(with: view, duration: 0.7, options: transitionOptions, animations: {
+            self.view.isHidden = true
+        })
+        UIView.transition(with: view, duration: 0.7, options: transitionOptions, animations: {
+            self.view.isHidden = false
+        })
+    }
+    //action call after a down swipe (portrait mode) or right swipe (landscape mode) to animate deleted images
+    fileprivate func flipAllImagesAfterClear() {
+        flipView(view: imageView1, flipFrom: .transitionFlipFromRight)
+        flipView(view: imageView2, flipFrom: .transitionFlipFromLeft)
+        flipView(view: imageView3, flipFrom: .transitionFlipFromRight)
+        flipView(view: imageView4, flipFrom: .transitionFlipFromLeft)
+        flipView(view: imageView5, flipFrom: .transitionFlipFromRight)
+        flipView(view: imageView6, flipFrom: .transitionFlipFromLeft)
+    }
+    //action call after a down swipe (portrait mode) or right swipe (landscape mode) to delete images already selected
+    fileprivate func clearImageViews() {
+        imageView1.image = nil
+        imageView2.image = nil
+        imageView3.image = nil
+        imageView4.image = nil
+        imageView5.image = nil
+        imageView6.image = nil
+    }
+    //action call after a down swipe (portrait mode) or right swipe (landscape mode) to do reappear the image buttons view
+    fileprivate func showImageButtons() {
+        imageView1Button.imageView?.isHidden = false
+        imageView2Button.imageView?.isHidden = false
+        imageView3Button.imageView?.isHidden = false
+        imageView4Button.imageView?.isHidden = false
+        imageView5Button.imageView?.isHidden = false
+        imageView6Button.imageView?.isHidden = false
+    }
+    //Methods call when clear the views
+    fileprivate func clearTheViews () {
+        flipAllImagesAfterClear()
+        showImageButtons()
+        clearImageViews()
+    }
 
-    
+    //MARK : - BUTTONS
     //action did after taping a layout button
     @IBAction func buttonLayoutClicked(_ sender: UIButton) {
         let tag = sender.tag
         switch tag {
         case 0:
             mainView.format = .layout1
+            flipView(view: mainView, flipFrom: .transitionFlipFromBottom)
         case 1:
             mainView.format = .layout2
+            flipView(view: mainView, flipFrom: .transitionFlipFromTop)
         case 2:
             mainView.format = .layout3
+            flipView(view: mainView, flipFrom: .transitionFlipFromBottom)
         default:
             break
         }
     }
-    
     //action did after taping an imageView button
     @IBAction func buttonViewCliked(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.savedPhotosAlbum){
@@ -72,7 +124,25 @@ class ViewController: UIViewController {
         }
         
     }
-    
+    //action did afer swiped down(portrait mode) swiped right (landscape mode)
+    @IBAction func swipeToClear(_ sender: UISwipeGestureRecognizer) {
+        print("swiped to clear")
+        clearTheViews()
+    }
+    //action did after swiping on the swipe Gesture Recognizers (Left/Up gestures) using UIActivityViewController
+    @IBAction func shareSwipe(_ sender: UISwipeGestureRecognizer) {
+        print("swiped to share")
+        
+        UIGraphicsBeginImageContext(mainView.frame.size)
+        mainView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        let activityViewController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        
+        activityViewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        
+        present(activityViewController, animated: true, completion: nil)
+    }
 }
 
 //MARK: - UIImagePickerController
