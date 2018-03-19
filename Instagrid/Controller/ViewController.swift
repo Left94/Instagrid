@@ -79,7 +79,7 @@ class ViewController: UIViewController {
     fileprivate func clearImageViews() {
         [imageView1, imageView2, imageView3, imageView4, imageView5, imageView6].forEach { $0?.image = nil }
     }
-    //action call after a down swipe (portrait mode) or right swipe (landscape mode) to do reappear the image buttons view
+    //action call after a down swipe (portrait mode) or right swipe (landscape mode) to do reappear the image button views
     fileprivate func showImageButtons() {
         [imageView1Button, imageView2Button, imageView3Button, imageView4Button,imageView5Button, imageView6Button].forEach { $0?.imageView?.isHidden = false }
     }
