@@ -379,7 +379,7 @@
                                 </connections>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-qo-SWd">
-                                <rect key="frame" x="346.66666666666669" y="5" width="118.66666666666669" height="64"/>
+                                <rect key="frame" x="347" y="5" width="118.66666666666669" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dgg-qo-SWd" secondAttribute="height" multiplier="10:3" id="7ag-ho-ag3"/>
                                 </constraints>
@@ -421,7 +421,7 @@
                                 </connections>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keK-73-kmk" userLabel="Stack ViewSwipeLeftRight">
-                                <rect key="frame" x="137" y="145" width="127" height="120"/>
+                                <rect key="frame" x="137" y="145.33333333333334" width="127" height="120.00000000000003"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKR-D4-hea" userLabel="ViewIcones">
                                         <rect key="frame" x="21" y="0.0" width="85" height="50"/>
@@ -589,11 +589,7 @@
                                 <exclude reference="IU0-kM-SW7"/>
                                 <exclude reference="LFR-nh-b2n"/>
                                 <exclude reference="l0V-QU-DtS"/>
-                                <exclude reference="3Oc-cx-CWl"/>
-                                <exclude reference="6AI-7E-C5x"/>
-                                <exclude reference="Zbh-qU-m3u"/>
-                                <exclude reference="dyg-pV-2eH"/>
-                                <exclude reference="ttX-Rw-yVH"/>
+                                <exclude reference="JUu-aK-6x4"/>
                                 <exclude reference="54c-8I-ffV"/>
                                 <exclude reference="8xS-Wl-SAX"/>
                                 <exclude reference="K4b-M8-fXp"/>
@@ -602,11 +598,15 @@
                                 <exclude reference="rho-iT-cJ2"/>
                                 <exclude reference="w4E-90-M4A"/>
                                 <exclude reference="xVr-Q2-OOX"/>
+                                <exclude reference="3Oc-cx-CWl"/>
+                                <exclude reference="6AI-7E-C5x"/>
+                                <exclude reference="Zbh-qU-m3u"/>
+                                <exclude reference="dyg-pV-2eH"/>
+                                <exclude reference="ttX-Rw-yVH"/>
                                 <exclude reference="5nc-9b-PoA"/>
                                 <exclude reference="ADY-xM-IsO"/>
                                 <exclude reference="vTN-ZT-f1b"/>
                                 <exclude reference="ztj-5C-BiL"/>
-                                <exclude reference="JUu-aK-6x4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -614,13 +614,6 @@
                                 <include reference="0ig-zg-cig"/>
                                 <exclude reference="VGS-Hg-9z6"/>
                                 <exclude reference="rnu-OA-rP3"/>
-                                <include reference="3Oc-cx-CWl"/>
-                                <exclude reference="6AI-7E-C5x"/>
-                                <exclude reference="B3g-x5-NuY"/>
-                                <exclude reference="OH5-oR-Tes"/>
-                                <include reference="Zbh-qU-m3u"/>
-                                <exclude reference="dyg-pV-2eH"/>
-                                <exclude reference="ttX-Rw-yVH"/>
                                 <include reference="54c-8I-ffV"/>
                                 <exclude reference="6uO-ap-RcV"/>
                                 <exclude reference="8xS-Wl-SAX"/>
@@ -633,6 +626,13 @@
                                 <include reference="rho-iT-cJ2"/>
                                 <include reference="w4E-90-M4A"/>
                                 <exclude reference="xVr-Q2-OOX"/>
+                                <include reference="3Oc-cx-CWl"/>
+                                <exclude reference="6AI-7E-C5x"/>
+                                <exclude reference="B3g-x5-NuY"/>
+                                <exclude reference="OH5-oR-Tes"/>
+                                <include reference="Zbh-qU-m3u"/>
+                                <exclude reference="dyg-pV-2eH"/>
+                                <exclude reference="ttX-Rw-yVH"/>
                                 <include reference="5nc-9b-PoA"/>
                                 <include reference="ADY-xM-IsO"/>
                                 <include reference="vTN-ZT-f1b"/>
@@ -655,17 +655,17 @@
                         <outlet property="buttonLayout2" destination="fVR-Gd-4Kd" id="x46-rq-5y4"/>
                         <outlet property="buttonLayout3" destination="agD-0a-act" id="VAH-4s-p8h"/>
                         <outlet property="imageView1" destination="u4B-eg-z7v" id="KVa-Y0-gPJ"/>
-                        <outlet property="imageView1Button" destination="ZXY-jB-Crd" id="uaE-tx-ltr"/>
+                        <outlet property="imageView1Button" destination="ZXY-jB-Crd" id="Lsy-2W-dsf"/>
                         <outlet property="imageView2" destination="91o-7Z-pXE" id="5sw-Ra-isV"/>
-                        <outlet property="imageView2Button" destination="Sos-0E-UG7" id="72o-zk-bgQ"/>
+                        <outlet property="imageView2Button" destination="Sos-0E-UG7" id="UPS-lv-tyD"/>
                         <outlet property="imageView3" destination="oAr-8v-mgg" id="SMu-5F-3jE"/>
-                        <outlet property="imageView3Button" destination="s87-3P-FaM" id="zTG-cd-ESN"/>
+                        <outlet property="imageView3Button" destination="s87-3P-FaM" id="wsN-ls-uns"/>
                         <outlet property="imageView4" destination="DUX-fl-DT3" id="466-XC-Ruu"/>
-                        <outlet property="imageView4Button" destination="eUp-tn-WGt" id="dKY-eK-P1D"/>
+                        <outlet property="imageView4Button" destination="eUp-tn-WGt" id="pqi-B1-jb9"/>
                         <outlet property="imageView5" destination="B1K-LX-czf" id="m9F-gt-mNE"/>
-                        <outlet property="imageView5Button" destination="YhB-Cn-ESi" id="3nv-2G-qy1"/>
+                        <outlet property="imageView5Button" destination="YhB-Cn-ESi" id="elZ-tw-SiZ"/>
                         <outlet property="imageView6" destination="7ib-7r-JNJ" id="uup-MG-bwf"/>
-                        <outlet property="imageView6Button" destination="RgY-5r-1kQ" id="sFk-Oi-M7z"/>
+                        <outlet property="imageView6Button" destination="RgY-5r-1kQ" id="ZVU-lO-Q8F"/>
                         <outlet property="mainView" destination="3wl-nN-Z8g" id="Cr0-bQ-fGb"/>
                     </connections>
                 </viewController>

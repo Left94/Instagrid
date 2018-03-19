@@ -41,6 +41,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView5Button: UIButton!
     @IBOutlet weak var imageView6Button: UIButton!
     
+    
+    
     //VARS
     var imagePicker = UIImagePickerController()
     var imagePicked = 0
@@ -75,21 +77,11 @@ class ViewController: UIViewController {
     }
     //action call after a down swipe (portrait mode) or right swipe (landscape mode) to delete images already selected
     fileprivate func clearImageViews() {
-        imageView1.image = nil
-        imageView2.image = nil
-        imageView3.image = nil
-        imageView4.image = nil
-        imageView5.image = nil
-        imageView6.image = nil
+        [imageView1, imageView2, imageView3, imageView4, imageView5, imageView6].forEach { $0?.image = nil }
     }
     //action call after a down swipe (portrait mode) or right swipe (landscape mode) to do reappear the image buttons view
     fileprivate func showImageButtons() {
-        imageView1Button.imageView?.isHidden = false
-        imageView2Button.imageView?.isHidden = false
-        imageView3Button.imageView?.isHidden = false
-        imageView4Button.imageView?.isHidden = false
-        imageView5Button.imageView?.isHidden = false
-        imageView6Button.imageView?.isHidden = false
+        [imageView1Button, imageView2Button, imageView3Button, imageView4Button,imageView5Button, imageView6Button].forEach { $0?.imageView?.isHidden = false }
     }
     //Methods call when clear the views
     fileprivate func clearTheViews () {
