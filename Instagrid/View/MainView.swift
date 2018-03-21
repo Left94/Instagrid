@@ -29,7 +29,6 @@ class MainView: UIView {
    
     
     
-    
     var format : Format = .layout2 {
         didSet {
             setFormat(format)
