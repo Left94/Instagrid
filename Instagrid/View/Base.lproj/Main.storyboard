@@ -37,7 +37,11 @@
                                                 <rect key="frame" x="0.0" y="0.5" width="129" height="128.5"/>
                                             </imageView>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXY-jB-Crd" userLabel="imageView1Button">
-                                                <rect key="frame" x="0.0" y="0.5" width="129" height="128.5"/>
+                                                <rect key="frame" x="34.5" y="34.5" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="OwF-Ja-iK2"/>
+                                                    <constraint firstAttribute="width" constant="60" id="kZP-rE-S72"/>
+                                                </constraints>
                                                 <state key="normal" image="Combined Shape"/>
                                                 <connections>
                                                     <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="siB-VP-IJZ"/>
@@ -49,12 +53,10 @@
                                             <constraint firstAttribute="trailing" secondItem="u4B-eg-z7v" secondAttribute="trailing" id="F4N-Ww-ROu"/>
                                             <constraint firstItem="u4B-eg-z7v" firstAttribute="leading" secondItem="87r-Vv-lK9" secondAttribute="leading" id="LEz-rp-t5H"/>
                                             <constraint firstItem="u4B-eg-z7v" firstAttribute="top" secondItem="87r-Vv-lK9" secondAttribute="top" id="Tmo-ME-Xnt"/>
-                                            <constraint firstItem="ZXY-jB-Crd" firstAttribute="top" secondItem="87r-Vv-lK9" secondAttribute="top" id="YWp-Nd-iqb"/>
+                                            <constraint firstItem="ZXY-jB-Crd" firstAttribute="centerX" secondItem="87r-Vv-lK9" secondAttribute="centerX" id="WHj-ye-sqm"/>
                                             <constraint firstAttribute="width" secondItem="87r-Vv-lK9" secondAttribute="height" multiplier="1:1" id="YbM-JZ-H0k"/>
                                             <constraint firstAttribute="bottom" secondItem="u4B-eg-z7v" secondAttribute="bottom" id="eOR-T8-8T6"/>
-                                            <constraint firstItem="ZXY-jB-Crd" firstAttribute="leading" secondItem="87r-Vv-lK9" secondAttribute="leading" id="frG-Sj-Utc"/>
-                                            <constraint firstAttribute="bottom" secondItem="ZXY-jB-Crd" secondAttribute="bottom" id="mAx-el-8qX"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZXY-jB-Crd" secondAttribute="trailing" id="oWv-0K-vXe"/>
+                                            <constraint firstItem="ZXY-jB-Crd" firstAttribute="centerY" secondItem="87r-Vv-lK9" secondAttribute="centerY" id="jP1-2T-MAF"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -69,7 +71,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128.5"/>
                                             </imageView>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sos-0E-UG7" userLabel="imageView2Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128.5"/>
+                                                <rect key="frame" x="34" y="34.5" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="ecQ-iN-HPA"/>
+                                                    <constraint firstAttribute="height" constant="60" id="re3-lS-45B"/>
+                                                </constraints>
                                                 <state key="normal" image="Combined Shape"/>
                                                 <connections>
                                                     <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CYR-63-gHN"/>
@@ -78,14 +84,12 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.95310121774673462" green="0.95312350988388062" blue="0.95311146974563599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Sos-0E-UG7" firstAttribute="centerX" secondItem="xJD-Jj-sWR" secondAttribute="centerX" id="5ob-pX-KLK"/>
                                             <constraint firstItem="91o-7Z-pXE" firstAttribute="leading" secondItem="xJD-Jj-sWR" secondAttribute="leading" id="F4X-Av-7NG"/>
-                                            <constraint firstItem="Sos-0E-UG7" firstAttribute="top" secondItem="xJD-Jj-sWR" secondAttribute="top" id="Jah-qM-V8m"/>
-                                            <constraint firstAttribute="trailing" secondItem="Sos-0E-UG7" secondAttribute="trailing" id="KoD-mo-PSf"/>
-                                            <constraint firstAttribute="bottom" secondItem="Sos-0E-UG7" secondAttribute="bottom" id="WHe-VM-WiC"/>
-                                            <constraint firstItem="Sos-0E-UG7" firstAttribute="leading" secondItem="xJD-Jj-sWR" secondAttribute="leading" id="ZCE-W0-rzM"/>
                                             <constraint firstAttribute="trailing" secondItem="91o-7Z-pXE" secondAttribute="trailing" id="bLw-Lj-och"/>
                                             <constraint firstAttribute="width" secondItem="xJD-Jj-sWR" secondAttribute="height" multiplier="1:1" id="h9t-aQ-O8J"/>
                                             <constraint firstItem="91o-7Z-pXE" firstAttribute="top" secondItem="xJD-Jj-sWR" secondAttribute="top" id="mcq-Rf-YyH"/>
+                                            <constraint firstItem="Sos-0E-UG7" firstAttribute="centerY" secondItem="xJD-Jj-sWR" secondAttribute="centerY" id="qfP-FZ-ijR"/>
                                             <constraint firstAttribute="bottom" secondItem="91o-7Z-pXE" secondAttribute="bottom" id="wND-56-uBM"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -101,7 +105,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128.5"/>
                                             </imageView>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s87-3P-FaM" userLabel="imageView3Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="129" height="128.5"/>
+                                                <rect key="frame" x="34.5" y="34.5" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="WUE-eC-0iI"/>
+                                                    <constraint firstAttribute="height" constant="60" id="oIK-Ql-Mj4"/>
+                                                </constraints>
                                                 <state key="normal" image="Combined Shape"/>
                                                 <connections>
                                                     <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2bh-HP-kpc"/>
@@ -111,13 +119,11 @@
                                         <color key="backgroundColor" red="0.9531012177" green="0.95312350990000005" blue="0.95311146970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fZu-rJ-CeN" secondAttribute="height" multiplier="1:1" id="4lb-HB-9O1"/>
-                                            <constraint firstAttribute="bottom" secondItem="s87-3P-FaM" secondAttribute="bottom" id="CKF-wr-E3y"/>
+                                            <constraint firstItem="s87-3P-FaM" firstAttribute="centerY" secondItem="fZu-rJ-CeN" secondAttribute="centerY" id="7fK-AN-xHc"/>
+                                            <constraint firstItem="s87-3P-FaM" firstAttribute="centerX" secondItem="fZu-rJ-CeN" secondAttribute="centerX" id="MaB-bI-A3d"/>
                                             <constraint firstItem="oAr-8v-mgg" firstAttribute="top" secondItem="fZu-rJ-CeN" secondAttribute="top" id="RZu-EE-jG3"/>
                                             <constraint firstAttribute="bottom" secondItem="oAr-8v-mgg" secondAttribute="bottom" id="WcQ-ba-gf2"/>
                                             <constraint firstAttribute="trailing" secondItem="oAr-8v-mgg" secondAttribute="trailing" id="bcg-Pr-EHW"/>
-                                            <constraint firstItem="s87-3P-FaM" firstAttribute="leading" secondItem="fZu-rJ-CeN" secondAttribute="leading" id="cuZ-8k-9RT"/>
-                                            <constraint firstItem="s87-3P-FaM" firstAttribute="top" secondItem="fZu-rJ-CeN" secondAttribute="top" id="nh9-jf-B1y"/>
-                                            <constraint firstAttribute="trailing" secondItem="s87-3P-FaM" secondAttribute="trailing" id="shU-Ch-py9"/>
                                             <constraint firstItem="oAr-8v-mgg" firstAttribute="leading" secondItem="fZu-rJ-CeN" secondAttribute="leading" id="z8w-4F-X86"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -133,7 +139,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128.5"/>
                                             </imageView>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUp-tn-WGt" userLabel="imageView4Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128.5"/>
+                                                <rect key="frame" x="34" y="34.5" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="DsH-4F-5Fk"/>
+                                                    <constraint firstAttribute="width" constant="60" id="F1b-qs-cs2"/>
+                                                </constraints>
                                                 <state key="normal" image="Combined Shape"/>
                                                 <connections>
                                                     <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VsA-4U-JIx"/>
@@ -144,10 +154,8 @@
                                         <constraints>
                                             <constraint firstItem="DUX-fl-DT3" firstAttribute="leading" secondItem="9hq-Gs-Pa5" secondAttribute="leading" id="1q0-Ap-9k1"/>
                                             <constraint firstAttribute="trailing" secondItem="DUX-fl-DT3" secondAttribute="trailing" id="2sI-U0-LS2"/>
-                                            <constraint firstItem="eUp-tn-WGt" firstAttribute="leading" secondItem="9hq-Gs-Pa5" secondAttribute="leading" id="3hn-TU-IGC"/>
-                                            <constraint firstAttribute="bottom" secondItem="eUp-tn-WGt" secondAttribute="bottom" id="5tj-1A-X3b"/>
-                                            <constraint firstAttribute="trailing" secondItem="eUp-tn-WGt" secondAttribute="trailing" id="7nS-Lv-fSt"/>
-                                            <constraint firstItem="eUp-tn-WGt" firstAttribute="top" secondItem="9hq-Gs-Pa5" secondAttribute="top" id="AhQ-Th-BEb"/>
+                                            <constraint firstItem="eUp-tn-WGt" firstAttribute="centerY" secondItem="9hq-Gs-Pa5" secondAttribute="centerY" id="CkI-mh-LJh"/>
+                                            <constraint firstItem="eUp-tn-WGt" firstAttribute="centerX" secondItem="9hq-Gs-Pa5" secondAttribute="centerX" id="FFU-aN-dv6"/>
                                             <constraint firstItem="DUX-fl-DT3" firstAttribute="top" secondItem="9hq-Gs-Pa5" secondAttribute="top" id="UNs-RW-V0f"/>
                                             <constraint firstAttribute="bottom" secondItem="DUX-fl-DT3" secondAttribute="bottom" id="seC-SA-G8S"/>
                                             <constraint firstAttribute="width" secondItem="9hq-Gs-Pa5" secondAttribute="height" multiplier="1:1" id="tac-i9-HwJ"/>
@@ -165,7 +173,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="128.5"/>
                                             </imageView>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhB-Cn-ESi" userLabel="imageView5Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="272" height="128.5"/>
+                                                <rect key="frame" x="106" y="34.5" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="IKN-ul-qhh"/>
+                                                    <constraint firstAttribute="width" constant="60" id="wvY-ju-w8O"/>
+                                                </constraints>
                                                 <state key="normal" image="Combined Shape"/>
                                                 <connections>
                                                     <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsq-Ir-bGx"/>
@@ -174,14 +186,12 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.95310121774673462" green="0.95312350988388062" blue="0.95311146974563599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="YhB-Cn-ESi" firstAttribute="leading" secondItem="LrM-KA-dLy" secondAttribute="leading" id="2aH-ad-IhP"/>
+                                            <constraint firstItem="YhB-Cn-ESi" firstAttribute="centerX" secondItem="LrM-KA-dLy" secondAttribute="centerX" id="2wd-EP-8Hm"/>
                                             <constraint firstItem="B1K-LX-czf" firstAttribute="leading" secondItem="LrM-KA-dLy" secondAttribute="leading" id="Bjd-js-ca2"/>
                                             <constraint firstAttribute="bottom" secondItem="B1K-LX-czf" secondAttribute="bottom" id="FhY-Pb-eid"/>
                                             <constraint firstAttribute="trailing" secondItem="B1K-LX-czf" secondAttribute="trailing" id="MTs-07-JFn"/>
-                                            <constraint firstAttribute="bottom" secondItem="YhB-Cn-ESi" secondAttribute="bottom" id="h9P-JQ-iYK"/>
+                                            <constraint firstItem="YhB-Cn-ESi" firstAttribute="centerY" secondItem="LrM-KA-dLy" secondAttribute="centerY" id="O8g-nQ-p3L"/>
                                             <constraint firstItem="B1K-LX-czf" firstAttribute="top" secondItem="LrM-KA-dLy" secondAttribute="top" id="sF9-Fd-hQv"/>
-                                            <constraint firstAttribute="trailing" secondItem="YhB-Cn-ESi" secondAttribute="trailing" id="w2k-xf-Z0Z"/>
-                                            <constraint firstItem="YhB-Cn-ESi" firstAttribute="top" secondItem="LrM-KA-dLy" secondAttribute="top" id="wzI-ni-91n"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -196,7 +206,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="128.5"/>
                                             </imageView>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgY-5r-1kQ" userLabel="imageView6Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="272" height="128.5"/>
+                                                <rect key="frame" x="106" y="34.5" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="jIc-jH-arT"/>
+                                                    <constraint firstAttribute="width" constant="60" id="lVw-1c-rDg"/>
+                                                </constraints>
                                                 <state key="normal" image="Combined Shape"/>
                                                 <connections>
                                                     <action selector="buttonViewCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gH3-6i-mAL"/>
@@ -206,12 +220,10 @@
                                         <color key="backgroundColor" red="0.9531012177" green="0.95312350990000005" blue="0.95311146970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="7ib-7r-JNJ" firstAttribute="top" secondItem="RdA-7w-G7d" secondAttribute="top" id="80a-3x-PRT"/>
-                                            <constraint firstItem="RgY-5r-1kQ" firstAttribute="leading" secondItem="RdA-7w-G7d" secondAttribute="leading" id="FI7-X4-3gK"/>
-                                            <constraint firstAttribute="bottom" secondItem="RgY-5r-1kQ" secondAttribute="bottom" id="JIO-BX-26J"/>
-                                            <constraint firstAttribute="trailing" secondItem="RgY-5r-1kQ" secondAttribute="trailing" id="UD8-Vp-fJU"/>
+                                            <constraint firstItem="RgY-5r-1kQ" firstAttribute="centerY" secondItem="RdA-7w-G7d" secondAttribute="centerY" id="JRv-Qh-P7B"/>
+                                            <constraint firstItem="RgY-5r-1kQ" firstAttribute="centerX" secondItem="RdA-7w-G7d" secondAttribute="centerX" id="Oay-Xm-gCQ"/>
                                             <constraint firstAttribute="bottom" secondItem="7ib-7r-JNJ" secondAttribute="bottom" id="VZM-vE-U71"/>
                                             <constraint firstAttribute="trailing" secondItem="7ib-7r-JNJ" secondAttribute="trailing" id="eWL-HY-ZBK"/>
-                                            <constraint firstItem="RgY-5r-1kQ" firstAttribute="top" secondItem="RdA-7w-G7d" secondAttribute="top" id="jg0-VQ-s7h"/>
                                             <constraint firstItem="7ib-7r-JNJ" firstAttribute="leading" secondItem="RdA-7w-G7d" secondAttribute="leading" id="njL-RY-qDi"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -507,7 +519,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.30536368489265442" green="0.56906527280807495" blue="0.72059768438339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.030578525736927986" green="0.47911757230758667" blue="0.66217833757400513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="rvc-gV-FJi" firstAttribute="leading" secondItem="zhU-WE-5fI" secondAttribute="leading" constant="19" id="5Kk-Hc-Nb5"/>
                                     <constraint firstItem="lZ0-iA-5Fm" firstAttribute="top" secondItem="rvc-gV-FJi" secondAttribute="bottom" constant="30" id="89Q-bv-Nqu"/>

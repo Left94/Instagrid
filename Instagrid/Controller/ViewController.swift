@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonLayout1: UIButton!
     @IBOutlet weak var buttonLayout2: UIButton!
     @IBOutlet weak var buttonLayout3: UIButton!
-    //Manage the Images view
+//Manage the Images view
     @IBOutlet var imageViews: [UIImageView]!
 //Manage the Buttons
     @IBOutlet weak var backgroundButton: UIButton!
