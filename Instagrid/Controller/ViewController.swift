@@ -12,6 +12,7 @@ import UIKit
 import UIKit
 
 
+
 class ViewController: UIViewController {
     
 //MARK : - OUTLETS
@@ -23,12 +24,9 @@ class ViewController: UIViewController {
 //Manage the Images view
     @IBOutlet var imageViews: [UIImageView]!
 //Manage the Buttons
-    @IBOutlet weak var backgroundButton: UIButton!
     @IBOutlet var imageViewButtons: [UIButton]!
-//Manage the popUpView
-    @IBOutlet weak var popUpView: UIView!
 //Manage the popUpView center constraint
-    @IBOutlet weak var centerPopUpConstraint: NSLayoutConstraint!
+
     
 //VARS
     var imagePicker = UIImagePickerController()
@@ -40,47 +38,55 @@ class ViewController: UIViewController {
         imagePicker.delegate = self
         imagePicker.sourceType = .savedPhotosAlbum
         imagePicker.allowsEditing = false
-        
-    // apply a corner raddius to the popUpView
-        popUpView.layer.cornerRadius = 10
-    // apply the corner radius to all the popUpView subviews
-        popUpView.layer.masksToBounds = true
-        
     }
+    
 //MARK : - METHODS
-    fileprivate func showPopUp() {
-        //change the popup constraint from -500 to 0 to move the view in the center and show it
-        centerPopUpConstraint.constant = 0
-        UIView.animate(withDuration: 0.3, animations: {
-            self.view.layoutIfNeeded()
-            self.backgroundButton.alpha = 0.5
-            })
+    // Error popup
+    private func displayErrorPopup(title:String, message:String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Continue", style: .cancel, handler: { (action) in
+            alertController.dismiss(animated: true, completion: nil)
+        }))
+        present(alertController, animated: true)
     }
-    fileprivate func layoutReadyToShare() {
+    fileprivate func checkIfReadyToShareLayout1() {
         if mainView.format == .layout1{
             if (imageViews[2].image != nil) && (imageViews[3].image != nil) && (imageViews[5].image != nil) {
-               shareMainView()
+                shareMainView()
             }else{
                 print("add photo please 1")
-                showPopUp()
+                displayErrorPopup(title: "Error", message: "Please add image to empty slot!")
+                //showPopUp()
             }
         }
+    }
+    
+    fileprivate func checkIfReadyToShareLayout2() {
         if mainView.format == .layout2 {
             if (imageViews[0].image != nil) && (imageViews[1].image != nil) && (imageViews[4].image != nil) {
                 shareMainView()
             }else{
                 print("add photo please 2")
-                showPopUp()
+                displayErrorPopup(title: "Error", message: "Please add image to empty slot!")
             }
         }
+    }
+    
+    fileprivate func checkIfReadyToShareLayout3() {
         if mainView.format == .layout3 {
             if (imageViews[0].image != nil) && (imageViews[1].image != nil) && (imageViews[2].image != nil) && (imageViews[3].image != nil) {
                 shareMainView()
             }else{
                 print("add photo please 3")
-                showPopUp()
+                displayErrorPopup(title: "Error", message: "Please add image to empty slot!")
             }
         }
+    }
+    
+    fileprivate func layoutReadyToShare() {
+        checkIfReadyToShareLayout1()
+        checkIfReadyToShareLayout2()
+        checkIfReadyToShareLayout3()
         
     }
 //Flip effect
@@ -120,14 +126,6 @@ class ViewController: UIViewController {
         clearImageViews()
     }
 //MARK : - BUTTONS
-    @IBAction func closePopUpButton(_ sender: Any) {
-        //change the popup constraint from 0 to -500 to move the view outside the screen and hide it
-        centerPopUpConstraint.constant = -500
-        UIView.animate(withDuration: 0.1, animations: {
-            self.view.layoutIfNeeded()
-            self.backgroundButton.alpha = 0
-        })
-    }
 //action did after taping a layout button
     @IBAction func buttonLayoutClicked(_ sender: UIButton) {
         let tag = sender.tag
@@ -157,19 +155,19 @@ class ViewController: UIViewController {
         print("swiped to clear")
         clearTheViews()
     }
-//action did after swiping on the swipe Gesture Recognizers (Left/Up gestures) using UIActivityViewController
+//action did after swiping on the swipe Gesture Recognizers (Left/Up gestures) using UIActivityViewController///////////////////
     fileprivate func shareMainView() {
         hideImageButtons()
         UIGraphicsBeginImageContext(mainView.frame.size)
         mainView.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         
         let activityViewController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
-        
         activityViewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-        
         present(activityViewController, animated: true, completion: nil)
     }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     @IBAction func shareSwipe(_ sender: UISwipeGestureRecognizer) {
         print("swiped to share")
         layoutReadyToShare()
