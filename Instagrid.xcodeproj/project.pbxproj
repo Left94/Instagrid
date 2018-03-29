@@ -15,7 +15,7 @@
 		BF5A14FB2029C502002E4728 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5A14F92029C502002E4728 /* Main.storyboard */; };
 		BF5A14FD2029C502002E4728 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5A14FC2029C502002E4728 /* Assets.xcassets */; };
 		BF5A15002029C502002E4728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5A14FE2029C502002E4728 /* LaunchScreen.storyboard */; };
-		BFD678502069142E000D02A5 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD6784F2069142E000D02A5 /* Grid.swift */; };
+		BFA99A98206CE01B00391CEE /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA99A97206CE01B00391CEE /* Grid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		BF5A14FC2029C502002E4728 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5A14FF2029C502002E4728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF5A15012029C502002E4728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFD6784F2069142E000D02A5 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Grid.swift; path = "Instagrid/Supporting Files/Grid.swift"; sourceTree = SOURCE_ROOT; };
+		BFA99A97206CE01B00391CEE /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,14 +51,6 @@
 				BF3F64F82048240400FA13F3 /* MainView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		BF3F64F020481E4E00FA13F3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BFD6784F2069142E000D02A5 /* Grid.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		BF3F64F220481E6900FA13F3 /* Controller */ = {
@@ -99,13 +91,21 @@
 		BF5A14F42029C501002E4728 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				BFA99A94206CDF9900391CEE /* Model */,
 				BF5A15012029C502002E4728 /* Info.plist */,
 				BF3F64F220481E6900FA13F3 /* Controller */,
 				BF3F64EF20481E3F00FA13F3 /* View */,
-				BF3F64F020481E4E00FA13F3 /* Model */,
 				BF3F64F320481E9800FA13F3 /* Supporting Files */,
 			);
 			path = Instagrid;
+			sourceTree = "<group>";
+		};
+		BFA99A94206CDF9900391CEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFA99A97206CE01B00391CEE /* Grid.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +185,7 @@
 				BF5A14F82029C502002E4728 /* ViewController.swift in Sources */,
 				BF3F64F92048240400FA13F3 /* MainView.swift in Sources */,
 				BF5A14F62029C501002E4728 /* AppDelegate.swift in Sources */,
-				BFD678502069142E000D02A5 /* Grid.swift in Sources */,
+				BFA99A98206CE01B00391CEE /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
