@@ -31,6 +31,7 @@ class ViewController: UIViewController {
 //MARK: - VARS
     var imagePicker = UIImagePickerController()
     var imageTag = 0
+    var buttonTag = 0
     
 //MARK: - METHODS
     // Error popup method using UIAlertConrtoller
@@ -90,14 +91,21 @@ class ViewController: UIViewController {
             self.view.isHidden = false
         })
     }
-    //Method call after a down swipe (portrait mode) or right swipe (landscape mode) to animate deleted images
+    //Method call after a down swipe (portrait mode) or right swipe (landscape mode) to animate deleted images (we use a loop to chose an action if its even or odd numbers
     fileprivate func flipAllImagesAfterClear() {
-        
         for i in 0..<imageViews.count {
             if i % 2 == 0 {
                 flipView(view: imageViews[i], flipFrom: .transitionFlipFromRight)
             }else{
                 flipView(view: imageViews[i], flipFrom: .transitionFlipFromLeft)
+            }
+        }
+    }
+    //Hide the "+" image button after use the cancel button only if users has already selected a image
+    func didCancel () {
+        for i in 0..<imageViews.count {
+            if imageTag == i + 3 && imageViews[i].image != nil {
+              imageViewButtons[i].imageView?.isHidden = true
             }
         }
     }
@@ -110,7 +118,6 @@ class ViewController: UIViewController {
         imageViewButtons.forEach { $0.imageView?.isHidden = false }
     }
     //Method call after a down swipe (portrait mode) or right swipe (landscape mode) to do hide the image button views
-
     fileprivate func hideImageButtons() {
         imageViewButtons.forEach { $0.imageView?.isHidden = true }
     }
@@ -173,15 +180,16 @@ extension UIImagePickerController {
     }
 }
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     //change imageView with user's selected image from gallery using imageViewButton's tag
     fileprivate func imageSelected(_ pickedImage: UIImage?) {
-
         for i in 0..<imageViews.count {
             if imageTag == i + 3 {
                 pickAndHidden(pickedImage: pickedImage, imageTag: i)
             }
         }
     }
+    //change the imageView with Image selected and hide button image view
     func pickAndHidden(pickedImage: UIImage?, imageTag: Int) {
         imageViews[imageTag].image = pickedImage
         imageViewButtons[imageTag].imageView?.isHidden = true
@@ -193,7 +201,6 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         dismiss(animated: true, completion: nil)
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: didCancel )
     }
-    
 }
