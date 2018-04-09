@@ -13,7 +13,7 @@ enum Format {
 }
 
 class MainView: UIView {
-
+//MARK: -OUTLETS
     @IBOutlet var view1 : UIView!
     @IBOutlet var view2 : UIView!
     @IBOutlet var view3 : UIView!
@@ -28,13 +28,16 @@ class MainView: UIView {
     
    
     
-    
+//MARK: -VARS
+    //each time the "format" property has to change we call "setFormat() with Format case we need
     var format : Format = .layout2 {
         didSet {
             setFormat(format)
         }
     }
+//MARK: -METHODS
     
+    //for each different format we hide an show the views we need
     fileprivate func displayLayout1() {
         layout1Selected.isHidden = false
         layout2Selected.isHidden = true
@@ -70,7 +73,7 @@ class MainView: UIView {
         view5.isHidden = true
         view6.isHidden = true
     }
-    
+    //method to select the format between each different case(layout1,2,3)
     private func setFormat(_ format : Format) {
         switch format {
         case .layout1:
